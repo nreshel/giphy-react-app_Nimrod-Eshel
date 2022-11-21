@@ -25,7 +25,7 @@ export const ImageList = memo(() => {
 		<LoadingSpinner isLoading={isAppLoading} >
 			{imageList?.map((image) => {
 				return (
-					<div className="card_container">
+					<div key={image.id} className="card_container">
 						{displayAvatar(image?.user)}
 						<img key={image.id} src={image.images.original.url} alt={image.title} className="giphy_image" />
 					</div>
