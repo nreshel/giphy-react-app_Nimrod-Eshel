@@ -1,14 +1,19 @@
 .avatar_container {
     display: flex;
     position: relative;
+    justify-content: space-between;
     align-items: center;
     img {
         width: 10%;
         height: auto;
     }
+    p:first-child {
+        margin-bottom: 5px;
+    }
     p {
         text-overflow: ellipsis;
-        margin: 0 auto;
+        margin: 0px auto;
+        text-align: center;
     }
     .icons_container {
         display: flex;

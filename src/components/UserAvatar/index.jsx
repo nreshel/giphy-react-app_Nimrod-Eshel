@@ -14,7 +14,7 @@ export const UserAvatar = ({ user, classes, showSocials }) => {
             return (
                 <div className="icons_container">
                     {showSocials?.instagram === true ? <a className="giphy_icon" href={user.profile_url}><SiGiphy size={25} /></a> : null}
-                    {showSocials.giphy === true ? <a className="instagram_icon" href={user.instagram_url}><SiInstagram size={30} /></a> : null}
+                    {showSocials?.giphy === true ? <a className="instagram_icon" href={user.instagram_url}><SiInstagram size={30} /></a> : null}
                 </div>
             )
         }
@@ -22,7 +22,10 @@ export const UserAvatar = ({ user, classes, showSocials }) => {
     return (
         <div className={parseClasses()}>
             <img src={user?.avatar_url} alt="" />
-            <p>{user?.display_name}</p>
+            <div>
+                <p>{user?.display_name}</p>
+                <p>@{user?.username}</p>
+            </div>
             {displaySocialIcons()}
         </div>
     )
