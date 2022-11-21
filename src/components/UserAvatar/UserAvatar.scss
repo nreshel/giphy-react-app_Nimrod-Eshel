@@ -1,0 +1,33 @@
+.avatar_container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    img {
+        width: 10%;
+        height: auto;
+    }
+    p {
+        text-overflow: ellipsis;
+        margin: 0 auto;
+    }
+    .icons_container {
+        display: flex;
+        margin-right: 2px;
+        .instagram_icon {
+            background: #d6249f;
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+            color: white;
+            display: flex;
+            border-radius: 20px;
+            position: relative;
+            &:focus {
+                color: white;
+            }
+        }
+        .giphy_icon {
+            color: black;
+            position: relative;
+            top: 2px;
+        }
+    }
+}
